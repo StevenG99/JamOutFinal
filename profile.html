@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<!--
+	Verti by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Verti by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="profile.css" />
+	</head>
+	<body  class="is-preload homepage">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Logo -->
+							<div id="logo">
+								<h1><a href="index.html">JamOut</a></h1>
+								
+							</div>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li class="current"><a href="main.html">Mission</a></li>
+									<li><a href="musicPage.html"> New Project +</a></li>
+									<li><a href="feed.html">Explore</a></li>
+									<button onclick="signOut()">SignOut</button>
+								</ul>
+							</nav>
+
+
+					</header>
+				</div>
+			</div>
+
+			<div class="profile-container">
+				<img src= 'images/header.png' class="cover-img">
+				<div class = "profile-details">
+					<div class = "pd-left">
+						<div class = "pd-row">
+							<img src="posts/profile pic/headphones.png" class= "pd-img">
+							<div>
+
+								<h3 id ="name"> UserName</h3>
+								<p id="email"> email </p>
+								<p> 3 friends </p>
+							</div>
+						</div>
+					</div>
+					<div class = "pd-right">
+						<button type='button'> Follow </button>
+
+					</div>
+				</div>
+			
+			<div class="profile-info">
+				<div class ="info-col">
+					<div class = "profile-intro">
+						
+						<div class="sidebar-title">
+							<h3>Biography</h3>
+							<a href= 'editProfile.html'>Edit</a>
+						</div>
+
+						<p class= "intro-text" id = "bioText"> wooo music, love music </p>
+						<hr>
+						<h3>Favorite Song</h3>
+						<p class= "intro-text" id = 'favSongText'> Happy Birthday </p>
+						<hr>
+						<h3>Favorite Artist</h3>
+						<p class= "intro-text" id = 'favArtistText'> Ariana Grande </p>
+
+
+					</div>
+				</div>
+				<div class ="post-col">
+					<div class = 'write-post-container'>
+							<div class = 'user-profile'>
+								<img src="images/member-1.png">
+								<div>
+									
+									<p id ="name2">User Name</p>
+									
+								</div>
+							</div>
+							<div class='post-input-container'>
+								<textarea rows = "1" placeholder="What's On Your Mind?" id= 'caption'></textarea>
+								<div class = 'add-post-links'>
+								<input type="file" id="File" accept="image/*,audio/*" multiple>
+								
+								<button onclick="post()" >post</button>
+							</div>
+							</div>
+						</div>
+
+						<div  id = 'POSTCONTAINER'>
+							
+						</div>
+						
+						
+
+			</div>
+		</div>
+	</div>
+	 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+    <script src = "test.js">
+    </script>
+	<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+</body>
+</html>

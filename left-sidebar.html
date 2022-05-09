@@ -1,0 +1,633 @@
+<!DOCTYPE HTML>
+<!--
+	Verti by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Verti by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body class="is-preload left-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Logo -->
+							<div id="logo">
+								<h1><a href="index.html">JamOut</a></h1>
+								
+							</div>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<ul>
+                                    <li class="current"><a href="main.html">Mission</a></li>
+                                    <li><a href="left-sidebar.html"> New Project +</a></li>
+                                    <li><a href="feed.html">Explore</a></li>
+                                    <li><a href="profile.html">Profile</a></li>
+                                    <li><a href="profile.html">Log Out</a></li>
+                                    
+                                </ul>
+							</nav>
+
+					</header>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-4 col-12-medium">
+								<div id="sidebar">
+
+									<!-- Sidebar -->
+										<section>
+											<h3>Start Your Jam Here</h3>
+											<p>JamOut allows our users to be able to make their own beats, save them, and work from there to create your own personal masterpiece. Check in on what other artists are jamming out to now</p>
+											<footer>
+												<a href="index.html" class="button icon solid fa-info-circle">Find out more</a>
+											</footer>
+										</section>
+
+										<section>
+											<h3>More Resources to Help you on your Musical Journey</h3>
+											<ul class="style2">
+												<li><a href="https://www.image-line.com/">ImageLine</a></li>
+												
+											</ul>
+										</section>
+
+								</div>
+							</div>
+							<div class="col-8 col-12-medium imp-medium">
+								<div id="content">
+
+									<!-- Content -->
+										<article>
+
+											<h2>Drums</h2>
+                                           
+                                            <button class="button4" type="button" id="demo">Hi Hat (Q)</button> 
+                                            <button class="button3" type="button" id="demo2">Lg-Tom (W)</button>
+                                            <button class="button3" type="button" id="demo3">Sm-Tom (E)</button>
+                                            <button class="button4" type="button" id="demo5">Crash (R)</button>
+                                            <br>
+                                            <button class="button3" type="button" id="demo4">Snare Drum (A)</button>
+
+                                            <button class="button5" type="button" id="demo1">Kick Drum (S)</button>
+                                            <br> 
+                                            <button class="button3" type="button" id="demo6">Hard Snare Drum (Z)</button>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                        <script>
+const Kick = new Audio("sounds/Kick.mp3");
+const SoftSnare = new Audio("sounds/SoftSnare.mp3");
+const HiHat = new Audio("sounds/HiHat.mp3");
+const Crash = new Audio("sounds/Crash.mp3");
+const HiTom = new Audio("sounds/HiTom.mp3");
+const LgTom = new Audio("sounds/LgTom.mp3");
+const HardSnare = new Audio("sounds/HardSnare.mp3");                                            
+                                            
+                                            
+
+                                            
+const playSound = audio => {
+  const clone = audio.cloneNode();
+  clone.play();
+  setTimeout(() => (clone.volume = 0.8), 400);
+  setTimeout(() => (clone.volume = 0.6), 800);
+  setTimeout(() => (clone.volume = 0.4), 1200);
+  setTimeout(() => (clone.volume = 0.2), 1600);
+  setTimeout(() => (clone.volume = 0), 2000);
+};                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+         document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 81) {
+                playSound(HiHat);
+            document.getElementById("demo").style.backgroundColor = "lightgreen";
+            }
+         });   
+            
+         document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 81) {
+            document.getElementById("demo").style.backgroundColor = "#0090c5";
+            }
+         });
+                                            
+                                            
+           document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 83) {
+                                playSound(Kick);
+            document.getElementById("demo1").style.backgroundColor = "lightgreen";
+            }
+         });   
+            
+         document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 83) {
+            document.getElementById("demo1").style.backgroundColor = "#0090c5";
+            }
+         });
+                                            
+         document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 87) {
+                playSound(LgTom);
+            document.getElementById("demo2").style.backgroundColor = "lightgreen";
+            }
+         });   
+            
+         document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 87) {
+            document.getElementById("demo2").style.backgroundColor = "#0090c5";
+            }
+         });   
+            
+         document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 69) {
+                playSound(HiTom);
+            document.getElementById("demo3").style.backgroundColor = "lightgreen";
+            }
+         });   
+            
+         document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 69) {
+            document.getElementById("demo3").style.backgroundColor = "#0090c5";
+            }
+         });
+            document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 65) {
+                playSound(SoftSnare);
+            document.getElementById("demo4").style.backgroundColor = "lightgreen";
+            }
+         });   
+            
+         document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 65) {
+            document.getElementById("demo4").style.backgroundColor = "#0090c5";
+            }
+         });
+           document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 82) {
+                playSound(Crash);
+            document.getElementById("demo5").style.backgroundColor = "lightgreen";
+            }
+         });   
+            
+         document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 82) {
+            document.getElementById("demo5").style.backgroundColor = "#0090c5";
+            }
+         });
+                                            
+         document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 90) {
+                playSound(HardSnare);
+            document.getElementById("demo6").style.backgroundColor = "lightgreen";
+            }
+         });   
+            
+         document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 90) {
+            document.getElementById("demo6").style.backgroundColor = "#0090c5";
+            }
+         });                                   
+                                           
+                                            </script>
+                                            
+										</article>
+      <div class="piano"> 
+		<div class="key white" data-note="C" id="key1"></div> 
+		<div class="key black" data-note="Cs"id="key2"></div> 
+		<div class="key white" data-note="D"id="key3"></div> 
+		<div class="key black" data-note="Ds"id="key4"></div> 
+		<div class="key white" data-note="E"id="key5"></div> 
+		<div class="key white" data-note="F"id="key6"></div> 
+		<div class="key black" data-note="Fs"id="key7"></div> 
+		<div class="key white" data-note="G"id="key8"></div> 
+		<div class="key black" data-note="Gs"id="key9"></div> 
+		<div class="key white" data-note="A"id="key10"></div> 
+		<div class="key black" data-note="As"id="key11"></div> 
+		<div class="key white" data-note="B"id="key12"></div> 
+          <div>
+              
+          <br></br><button>Instruments</button>
+          
+          
+<!--Recording-->
+<script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+        <script src="https://markjivko.com/dist/recorder.js"></script>
+        <script>
+            jQuery(document).ready(function () {
+                var $ = jQuery;
+                var myRecorder = {
+                    objects: {
+                        context: null,
+                        stream: null,
+                        recorder: null
+                    },
+                    init: function () {
+                        if (null === myRecorder.objects.context) {
+                            myRecorder.objects.context = new (
+                                    window.AudioContext || window.webkitAudioContext
+                                    );
+                        }
+                    },
+                    start: function () {
+                        var options = {audio: true, video: false};
+                        navigator.mediaDevices.getUserMedia(options).then(function (stream) {
+                            myRecorder.objects.stream = stream;
+                            myRecorder.objects.recorder = new Recorder(
+                                    myRecorder.objects.context.createMediaStreamSource(stream),
+                                    {numChannels: 1}
+                            );
+                            myRecorder.objects.recorder.record();
+                        }).catch(function (err) {});
+                    },
+                    stop: function (listObject) {
+                        if (null !== myRecorder.objects.stream) {
+                            myRecorder.objects.stream.getAudioTracks()[0].stop();
+                        }
+                        if (null !== myRecorder.objects.recorder) {
+                            myRecorder.objects.recorder.stop();
+
+                            // Validate object
+                            if (null !== listObject
+                                    && 'object' === typeof listObject
+                                    && listObject.length > 0) {
+                                // Export the WAV file
+                                myRecorder.objects.recorder.exportWAV(function (blob) {
+                                    var url = (window.URL || window.webkitURL)
+                                            .createObjectURL(blob);
+
+                                    // Prepare the playback
+                                    var audioObject = $('<audio controls></audio>')
+                                            .attr('src', url);
+
+                                    // Prepare the download link
+                                    var downloadObject = $('<a>&#9660;</a>')
+                                            .attr('href', url)
+                                            .attr('download', new Date().toUTCString() + '.wav');
+
+                                    // Wrap everything in a row
+                                    var holderObject = $('<div class="row"></div>')
+                                            .append(audioObject)
+                                            .append(downloadObject);
+
+                                    // Append to the list
+                                    listObject.append(holderObject);
+                                });
+                            }
+                        }
+                    }
+                };
+
+                // Prepare the recordings list
+                var listObject = $('[data-role="recordings"]');
+
+                // Prepare the record button
+                $('[data-role="controls"] > button').click(function () {
+                    // Initialize the recorder
+                    myRecorder.init();
+
+                    // Get the button state 
+                    var buttonState = !!$(this).attr('data-recording');
+
+                    // Toggle
+                    if (!buttonState) {
+                        $(this).attr('data-recording', 'true');
+                        myRecorder.start();
+                    } else {
+                        $(this).attr('data-recording', '');
+                        myRecorder.stop(listObject);
+                    }
+                });
+            });
+        </script>
+        <div class="holder">
+            <div data-role="controls">
+                <br><br><br>
+                <button id="record" onclick="myFunction()">Record</button>
+            </div>
+            <div data-role="recordings"></div>
+        </div>
+
+          
+          </div>
+	</div> 
+                                <script>
+            function myFunction() {
+  //document.getElementById("demo").style.color = "red";
+  
+  if(document.getElementById("record").style.color == "red"){
+  	document.getElementById("record").style.color = "white";
+  }
+  else
+  {
+  document.getElementById("record").style.color = "red";  
+  }
+}                        
+                                    
+                                    
+                                </script>
+                                
+                                
+                                
+                                    <script>
+         const C4 = new Audio("sounds/C4.mp3");
+const Db4 = new Audio("sounds/Db4.mp3");
+const D4 = new Audio("sounds/D4.mp3");
+const Eb4 = new Audio("sounds/Eb4.mp3");
+const E4 = new Audio("sounds/E4.mp3");
+const F4 = new Audio("sounds/F4.mp3");
+const Gb4 = new Audio("sounds/Gb4.mp3");
+const G4 = new Audio("sounds/G4.mp3");
+const Ab4 = new Audio("sounds/Ab4.mp3");
+const A4 = new Audio("sounds/A4.mp3");
+const Bb4 = new Audio("sounds/Bb4.mp3");
+const B4 = new Audio("sounds/B4.mp3");
+const C5 = new Audio("sounds/C5.mp3");
+const Db5 = new Audio("sounds/Db5.mp3");
+const D5 = new Audio("sounds/D5.mp3");
+const Eb5 = new Audio("sounds/Eb5.mp3");
+const E5 = new Audio("sounds/E5.mp3");
+
+                                        
+                                        
+         document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 88) {
+                playSound(C4);
+            document.getElementById("key1").style.backgroundColor = "lightgreen";
+            }
+         });   
+            
+         document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 88) {
+            document.getElementById("key1").style.backgroundColor = "white";
+            }
+         });
+         
+         document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 68) {
+                 playSound(Db4);
+            document.getElementById("key2").style.backgroundColor = "lightgreen";
+            }
+         });   
+            
+         document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 68) {
+            document.getElementById("key2").style.backgroundColor = "black";
+            }
+         });
+                                        
+                                        
+          document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 67) {
+                   playSound(D4);
+            document.getElementById("key3").style.backgroundColor = "lightgreen";
+            }
+         });   
+            
+         document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 67) {
+            document.getElementById("key3").style.backgroundColor = "white";
+            }
+         });                              
+                                        
+          document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 70) {
+            playSound(Eb4);    
+            document.getElementById("key4").style.backgroundColor = "lightgreen";
+            }
+         });   
+            
+         document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 70) {
+            document.getElementById("key4").style.backgroundColor = "black";
+            }
+         });                              
+                                        
+           document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 86) {
+                playSound(E4);
+            document.getElementById("key5").style.backgroundColor = "lightgreen";
+            }
+         });   
+            
+         document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 86) {
+            document.getElementById("key5").style.backgroundColor = "white";
+            }
+         });                              
+                                        
+           document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 66) {
+                playSound(F4);
+            document.getElementById("key6").style.backgroundColor = "lightgreen";
+            }
+         });   
+            
+         document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 66) {
+            document.getElementById("key6").style.backgroundColor = "white";
+            }
+         });                              
+                                        
+           document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 72) {
+                playSound(Gb4);
+            document.getElementById("key7").style.backgroundColor = "lightgreen";
+            }
+         });   
+            
+         document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 72) {
+            document.getElementById("key7").style.backgroundColor = "black";
+            }
+         });                              
+                                        
+           document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 78) {
+                playSound(G4);
+            document.getElementById("key8").style.backgroundColor = "lightgreen";
+            }
+         });   
+            
+         document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 78) {
+            document.getElementById("key8").style.backgroundColor = "white";
+            }
+         });                              
+                                        
+           document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 74) {
+                playSound(Ab4);
+            document.getElementById("key9").style.backgroundColor = "lightgreen";
+            }
+         });   
+            
+         document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 74) {
+            document.getElementById("key9").style.backgroundColor = "black";
+            }
+         });                              
+                                        
+           document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 77) {
+                playSound(A4);
+            document.getElementById("key10").style.backgroundColor = "lightgreen";
+            }
+         });   
+            
+         document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 77) {
+            document.getElementById("key10").style.backgroundColor = "white";
+            }
+         });                              
+                                        
+           document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 75) {
+                playSound(Bb4);
+            document.getElementById("key11").style.backgroundColor = "lightgreen";
+            }
+         });   
+            
+         document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 75) {
+            document.getElementById("key11").style.backgroundColor = "black";
+            }
+         });                              
+                                        
+           document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 188) {
+                playSound(B4);
+            document.getElementById("key12").style.backgroundColor = "lightgreen";
+            }
+         });   
+            
+         document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 188) {
+            document.getElementById("key12").style.backgroundColor = "white";
+            }
+         });                              
+                                        
+                                        
+                                         
+                                    </script>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer-wrapper">
+					<footer id="footer" class="container">
+						<div class="row">
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Links -->
+									<section class="widget links">
+										<h3>Random Stuff</h3>
+										<ul class="style2">
+											<li><a href="#">Etiam feugiat condimentum</a></li>
+											<li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+											<li><a href="#">Sed porttitor cras in erat nec</a></li>
+											<li><a href="#">Felis varius pellentesque potenti</a></li>
+											<li><a href="#">Nullam scelerisque blandit leo</a></li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Links -->
+									<section class="widget links">
+										<h3>Random Stuff</h3>
+										<ul class="style2">
+											<li><a href="#">Etiam feugiat condimentum</a></li>
+											<li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+											<li><a href="#">Sed porttitor cras in erat nec</a></li>
+											<li><a href="#">Felis varius pellentesque potenti</a></li>
+											<li><a href="#">Nullam scelerisque blandit leo</a></li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Links -->
+									<section class="widget links">
+										<h3>Random Stuff</h3>
+										<ul class="style2">
+											<li><a href="#">Etiam feugiat condimentum</a></li>
+											<li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+											<li><a href="#">Sed porttitor cras in erat nec</a></li>
+											<li><a href="#">Felis varius pellentesque potenti</a></li>
+											<li><a href="#">Nullam scelerisque blandit leo</a></li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-3 col-6-medium col-12-small">
+
+								<!-- Contact -->
+									<section class="widget contact">
+										<h3>Contact Us</h3>
+										<ul>
+											<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+											<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+											<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+											<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+											<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
+										</ul>
+										<p>1234 Fictional Road<br />
+										Nashville, TN 00000<br />
+										(800) 555-0000</p>
+									</section>
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<div id="copyright">
+									<ul class="menu">
+										<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
